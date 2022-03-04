@@ -47,7 +47,6 @@ const OverviewItem = styled.div`
     font-weight: 400;
     text-transform: uppercase;
     margin-bottom: 5px;
-
 `;
 const Description = styled.p`
   margin: 20px 0px;
