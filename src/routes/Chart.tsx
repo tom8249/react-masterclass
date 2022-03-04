@@ -1,7 +1,6 @@
 import { useQuery } from "react-query";
 import { fetchCoinHistory } from "../api";
 import ApexChart from "react-apexcharts";
-
 interface IHistorical {
   time_open: string;
   time_close: string;
@@ -12,17 +11,12 @@ interface IHistorical {
   volume: number;
   market_cap: number;
 }
-
 interface ChartProps {
   coinId: string;
 }
 function Chart({ coinId }: ChartProps) {
-  const { isLoading, data } = useQuery<IHistorical[]>(
-    ["ohlcv", coinId],
-    () => fetchCoinHistory(coinId),
-    {
-      refetchInterval: 10000,
-    }
+  const { isLoading, data } = useQuery<IHistorical[]>(["ohlcv", coinId], () =>
+    fetchCoinHistory(coinId)
   );
   return (
     <div>
@@ -66,12 +60,12 @@ function Chart({ coinId }: ChartProps) {
             },
             fill: {
               type: "gradient",
-              gradient: { gradientToColors: ["blue"], stops: [0, 100] },
+              gradient: { gradientToColors: ["#0be881"], stops: [0, 100] },
             },
-            colors: ["red"],
+            colors: ["#0fbcf9"],
             tooltip: {
               y: {
-                formatter: (value) => `${value.toFixed(2)}`,
+                formatter: (value) => `$${value.toFixed(2)}`,
               },
             },
           }}
@@ -80,5 +74,4 @@ function Chart({ coinId }: ChartProps) {
     </div>
   );
 }
-
 export default Chart;
