@@ -18,6 +18,7 @@
     "react-query": "^3.27.0",
     "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
+    "recoil": "^0.6.1",
     "styled-components": "^5.3.1",
     "styled-reset": "^4.3.4",
     "typescript": "^4.4.4",
@@ -49,10 +50,10 @@
       "last 1 safari version"
     ]
   },
+  "homepage": "https://tom8249.github.io/react-masterclass",
   "devDependencies": {
     "@types/react-query": "^1.2.9",
     "@types/react-router-dom": "^5.3.1",
     "@types/styled-components": "^5.1.15"
-  },
-  "homepage": "https://tom8249.github.io/react-masterclass"
+  }
 }
