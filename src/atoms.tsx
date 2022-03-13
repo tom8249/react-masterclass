@@ -1,6 +1,5 @@
 import { get } from "http";
 import { atom, selector } from "recoil";
-import { localStorageEffect } from "./localStorage";
 
 export enum Categories {
   "TO_DO" = "TO_DO",
@@ -23,7 +22,6 @@ export const categoryState = atom<Categories>({
 export const toDoState = atom<IToDo[]>({
   key: "toDo",
   default: [],
-  effects: [localStorageEffect("toDos")],
 });
 
 export const toDoSelector = selector({
