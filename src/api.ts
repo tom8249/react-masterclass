@@ -25,3 +25,9 @@ export function getMovies() {
     (response) => response.json()
   );
 }
+
+export function getLatest() {
+  return fetch(`${BASE_PATH}/movie/latest?api_key=${API_KEY}`).then(
+    (response) => response.json()
+  );
+}
